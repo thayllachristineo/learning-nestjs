@@ -1,15 +1,15 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UserRoles } from './user-roles';
-
 import * as bcrypt from 'bcrypt';
+
+import { PrismaService } from 'src/prisma/prisma.service';
+import { UserRoles } from './user-roles';
+import { CreateUserDto } from './dto/create-user.dto';
 
 @Injectable()
 export class UsersService {
   constructor(private prismaService: PrismaService) {}
 
-  create(data: CreateUserDto) {
+  createPartnerUser(data: CreateUserDto) {
     return this.prismaService.user.create({
       data: {
         ...data,

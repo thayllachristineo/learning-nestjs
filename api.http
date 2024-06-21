@@ -9,5 +9,13 @@ Content-Type: application/json
   "email": "email3@email.com",
   "password": "abc123"
 }
+
+### Partners
+POST http://localhost:3000/partner/users
+Content-Type: application/json
+
+{
+  "name":  "Nome Sobrenome",
+  "email": "email4@email.com",
   "password": "abc123"
 }
