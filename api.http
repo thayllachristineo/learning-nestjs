@@ -28,3 +28,17 @@ Content-Type: application/json
   "email": "email4@email.com",
   "password": "123456"
 }
+
+### Partners
+POST http://localhost:3000/partners
+Content-Type: application/json
+Authorization: Bearer JWT_TOKEN
+
+{
+  "name": "Partner 2"
+
+}
+
+### Partners List
+GET http://localhost:3000/partners
+Authorization: Bearer JWT_TOKEN
