@@ -42,3 +42,20 @@ Authorization: Bearer JWT_TOKEN
 ### Partners List
 GET http://localhost:3000/partners
 Authorization: Bearer JWT_TOKEN
+
+
+### Events
+POST http://localhost:3000/events
+Authorization: Bearer JWT_TOKEN
+Content-Type: application/json
+
+{
+    "name": "Evento 1",
+    "description": "Evento 1",
+    "date": "2024-06-12T23:21:34.60"
+}
+
+
+### Events List
+GET http://localhost:3000/events
+Authorization: Bearer 
