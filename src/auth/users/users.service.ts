@@ -19,6 +19,16 @@ export class UsersService {
     });
   }
 
+  createCommonUser(data: CreateUserDto) {
+    return this.prismaService.user.create({
+      data: {
+        ...data,
+        password: this.generateHash(data.password),
+        roles: [UserRoles.USER],
+      },
+    });
+  }
+
   generateHash(password: string) {
     return bcrypt.hashSync(password, 10);
   }
